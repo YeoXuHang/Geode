@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "geode:blocks/enderethyst_cluster"
+  }
+}

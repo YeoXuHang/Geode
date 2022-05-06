@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "geode:block/small_enderethyst_bud",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "geode:block/small_enderethyst_bud",
+      "x": 90,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "geode:block/small_enderethyst_bud",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "geode:block/small_enderethyst_bud",
+      "x": 90,
+      "y": 180
+    },
+    "facing=up": {
+      "model": "geode:block/small_enderethyst_bud"
+    },
+    "facing=west": {
+      "model": "geode:block/small_enderethyst_bud",
+      "x": 90,
+      "y": 270
+    }
+  }
+}

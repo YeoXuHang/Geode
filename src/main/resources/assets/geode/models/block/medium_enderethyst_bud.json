@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "geode:blocks/medium_enderethyst_bud"
+  }
+}
