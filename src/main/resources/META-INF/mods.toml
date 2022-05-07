@@ -21,6 +21,6 @@ a mod that add geodes to Minecraft Overworld, Nether and even The End!
 [[dependencies.geode]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.18,1.19)"
+    versionRange="[1.18.1,1.19)"
     ordering="NONE"
     side="BOTH"
