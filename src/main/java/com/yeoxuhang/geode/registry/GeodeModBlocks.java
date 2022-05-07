@@ -53,6 +53,11 @@ public class GeodeModBlocks {
         return 2;
     })), CreativeModeTab.TAB_BUILDING_BLOCKS);
 
+    public static final RegistryObject<Block> QUARTZ_CRYSTAL = registerBlock("quartz_crystal",
+            () -> new AmethystClusterBlock(7, 3, BlockBehaviour.Properties.copy(Blocks.AMETHYST_CLUSTER).noOcclusion().randomTicks().sound(SoundType.AMETHYST_CLUSTER).strength(1.5F).lightLevel( (p_60929_) ->{
+                return 8;
+            } )), CreativeModeTab.TAB_BUILDING_BLOCKS);
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn, tab);
