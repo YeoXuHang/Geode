@@ -25,10 +25,10 @@ public class GeodeMod {
 
     private void clientSetup(final FMLClientSetupEvent event) {
         //Enderethyst Cluster
-        ItemBlockRenderTypes.setRenderLayer(GeodeModBlocks.ENDERETHYST_CLUSTER.get(), RenderType.cutout());
+        /**ItemBlockRenderTypes.setRenderLayer(GeodeModBlocks.ENDERETHYST_CLUSTER.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(GeodeModBlocks.LARGE_ENDERETHYST_BUD.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(GeodeModBlocks.MEDIUM_ENDERETHYST_BUD.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(GeodeModBlocks.SMALL_ENDERETHYST_BUD.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(GeodeModBlocks.SMALL_ENDERETHYST_BUD.get(), RenderType.cutout());**/
         //Quartz Crystal
         ItemBlockRenderTypes.setRenderLayer(GeodeModBlocks.QUARTZ_CRYSTAL.get(), RenderType.cutout());
     }

@@ -15,7 +15,7 @@ a mod that add geodes to Minecraft Overworld, Nether and even The End!
 [[dependencies.geode]]
     modId="forge"
     mandatory=true
-    versionRange="[38,)"
+    versionRange="[39,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.geode]]

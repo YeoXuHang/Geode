@@ -19,12 +19,12 @@ public class GeodeModEndGeodesGeneration {
                 event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES);
         ResourceKey<Biome> biomeKey = ResourceKey.create(Registry.BIOME_REGISTRY, event.getName());
         BiomeGenerationSettingsBuilder builder = event.getGeneration();
-        if (doesBiomeMatch(event.getName(), Biomes.END_HIGHLANDS)){
+        /**if (doesBiomeMatch(event.getName(), Biomes.END_HIGHLANDS)){
             base.add(() -> GeodeModPlacedFeatures.ENDER_GEODE_PLACED);
         }
         if (doesBiomeMatch(event.getName(), Biomes.END_MIDLANDS)){
             base.add(() -> GeodeModPlacedFeatures.ENDER_GEODE_PLACED);
-        }
+        }**/
         /**if (BiomeDictionary.hasType(biomeKey, BiomeDictionary.Type.END)){
             base.add(() -> GeodeModPlacedFeatures.ENDER_GEODE_PLACED);
         }**/

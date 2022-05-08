@@ -20,7 +20,6 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 import javax.annotation.Nullable;
-import java.util.Random;
 
 public class QuartzCrystalBlock extends AmethystBlock implements SimpleWaterloggedBlock {
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
@@ -32,15 +31,15 @@ public class QuartzCrystalBlock extends AmethystBlock implements SimpleWaterlogg
     protected final VoxelShape upAabb;
     protected final VoxelShape downAabb;
 
-    public QuartzCrystalBlock(int p_152015_, int p_152016_, BlockBehaviour.Properties p_152017_) {
-        super(p_152017_);
+    public QuartzCrystalBlock(int box, int i, BlockBehaviour.Properties properties) {
+        super(properties);
         this.registerDefaultState(this.defaultBlockState().setValue(WATERLOGGED, Boolean.valueOf(false)).setValue(FACING, Direction.UP));
-        this.upAabb = Block.box((double)p_152016_, 0.0D, (double)p_152016_, (double)(16 - p_152016_), (double)p_152015_, (double)(16 - p_152016_));
-        this.downAabb = Block.box((double)p_152016_, (double)(16 - p_152015_), (double)p_152016_, (double)(16 - p_152016_), 16.0D, (double)(16 - p_152016_));
-        this.northAabb = Block.box((double)p_152016_, (double)p_152016_, (double)(16 - p_152015_), (double)(16 - p_152016_), (double)(16 - p_152016_), 16.0D);
-        this.southAabb = Block.box((double)p_152016_, (double)p_152016_, 0.0D, (double)(16 - p_152016_), (double)(16 - p_152016_), (double)p_152015_);
-        this.eastAabb = Block.box(0.0D, (double)p_152016_, (double)p_152016_, (double)p_152015_, (double)(16 - p_152016_), (double)(16 - p_152016_));
-        this.westAabb = Block.box((double)(16 - p_152015_), (double)p_152016_, (double)p_152016_, 16.0D, (double)(16 - p_152016_), (double)(16 - p_152016_));
+        this.upAabb = Block.box((double)i, 0.0D, (double)i, (double)(16 - i), (double)box, (double)(16 - i));
+        this.downAabb = Block.box((double)i, (double)(16 - box), (double)i, (double)(16 - i), 16.0D, (double)(16 - i));
+        this.northAabb = Block.box((double)i, (double)i, (double)(16 - box), (double)(16 - i), (double)(16 - i), 16.0D);
+        this.southAabb = Block.box((double)i, (double)i, 0.0D, (double)(16 - i), (double)(16 - i), (double)box);
+        this.eastAabb = Block.box(0.0D, (double)i, (double)i, (double)box, (double)(16 - i), (double)(16 - i));
+        this.westAabb = Block.box((double)(16 - box), (double)i, (double)i, 16.0D, (double)(16 - i), (double)(16 - i));
     }
 
     public VoxelShape getShape(BlockState p_152021_, BlockGetter p_152022_, BlockPos p_152023_, CollisionContext p_152024_) {
@@ -102,4 +101,5 @@ public class QuartzCrystalBlock extends AmethystBlock implements SimpleWaterlogg
     public PushReaction getPistonPushReaction(BlockState p_152047_) {
         return PushReaction.DESTROY;
     }
+
 }

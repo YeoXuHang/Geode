@@ -10,7 +10,6 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.level.material.PushReaction;
 
 import java.util.Random;
@@ -27,7 +26,7 @@ public class BuddingEnderethystBlock extends AmethystBlock {
         return PushReaction.DESTROY;
     }
 
-    public void randomTick(BlockState blockState, ServerLevel serverLevel, BlockPos blockPos, Random random) {
+    /**public void randomTick(BlockState blockState, ServerLevel serverLevel, BlockPos blockPos, Random random) {
         if (random.nextInt(3) == 0) {
             Direction direction = DIRECTIONS[random.nextInt(DIRECTIONS.length)];
             BlockPos blockpos = blockPos.relative(direction);
@@ -49,7 +48,7 @@ public class BuddingEnderethystBlock extends AmethystBlock {
             }
 
         }
-    }
+    }**/
 
     public static boolean canClusterGrowAtState(BlockState blockState) {
         return blockState.isAir() || blockState.is(Blocks.WATER) && blockState.getFluidState().getAmount() == 8;
