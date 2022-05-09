@@ -8,7 +8,7 @@
 
 
 # Mod Download Page：
-# https://www.curseforge.com/minecraft/mc-mods/geode-forge
+https://www.curseforge.com/minecraft/mc-mods/geode-forge
 
 
 
