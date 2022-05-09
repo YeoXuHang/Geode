@@ -1,5 +1,6 @@
 package com.yeoxuhang.geode.registry;
 
+import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -15,8 +16,9 @@ import java.util.function.Supplier;
 
 public class GeodeModEndGeodesGeneration {
     public static void generateEndGeodeFeatures(final BiomeLoadingEvent event) {
-        List<Supplier<PlacedFeature>> base =
+        List<Holder<PlacedFeature>> base =
                 event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES);
+
         ResourceKey<Biome> biomeKey = ResourceKey.create(Registry.BIOME_REGISTRY, event.getName());
         BiomeGenerationSettingsBuilder builder = event.getGeneration();
         /**if (doesBiomeMatch(event.getName(), Biomes.END_HIGHLANDS)){

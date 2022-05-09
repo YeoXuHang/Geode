@@ -4,10 +4,7 @@ import com.yeoxuhang.geode.registry.GeodeModBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.world.level.block.AmethystBlock;
-import net.minecraft.world.level.block.AmethystClusterBlock;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.level.material.PushReaction;
@@ -15,7 +12,6 @@ import net.minecraft.world.level.material.PushReaction;
 import java.util.Random;
 
 public class BuddingNetherQuartzBlock extends AmethystBlock {
-    public static final int GROWTH_CHANCE = 20;
     private static final Direction[] DIRECTIONS = Direction.values();
 
     public BuddingNetherQuartzBlock(Properties properties) {
