@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01",
+    "23"
+  ],
+  "key": {
+    "0": {
+      "item": "geode:wrappsit_cluster"
+    },
+    "1": {
+      "item": "geode:wrappsit_cluster"
+    },
+    "2": {
+      "item": "geode:wrappsit_cluster"
+    },
+    "3": {
+      "item": "geode:wrappsit_cluster"
+    }
+  },
+  "result": {
+    "item": "geode:wrappsit_block",
+    "count": 1
+  }
+}

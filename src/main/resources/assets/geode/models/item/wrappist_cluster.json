@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "geode:blocks/large_enderethyst_bud"
+    "layer0": "geode:blocks/wrappist_cluster"
   },
   "display": {
     "head": {

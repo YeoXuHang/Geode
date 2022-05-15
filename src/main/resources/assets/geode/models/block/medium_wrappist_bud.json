@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "geode:blocks/enderethyst_cluster"
+    "cross": "geode:blocks/medium_wrappist_bud"
   }
 }
