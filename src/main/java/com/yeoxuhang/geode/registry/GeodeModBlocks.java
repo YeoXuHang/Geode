@@ -22,7 +22,18 @@ public class GeodeModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, GeodeMod.MOD_ID);
 
-    public static final RegistryObject<Block> SMOOTH_END_STONE = registerBlock("smooth_end_stone",
+    public static final RegistryObject<Block> BUDDING_NETHER_QUARTZ = registerBlock("budding_nether_quartz",
+            () -> new BuddingNetherQuartzBlock(BlockBehaviour.Properties.of(Material.AMETHYST).randomTicks().strength(1.5F).sound(SoundType.NETHER_ORE).requiresCorrectToolForDrops()), CreativeModeTab.TAB_BUILDING_BLOCKS);
+
+    public static final RegistryObject<Block> BUDDING_BASALT_QUARTZ = registerBlock("budding_basalt_quartz",
+            () -> new BuddingNetherQuartzBlock(BlockBehaviour.Properties.of(Material.AMETHYST).randomTicks().strength(1.5F).sound(SoundType.BASALT).requiresCorrectToolForDrops()), CreativeModeTab.TAB_BUILDING_BLOCKS);
+
+    public static final RegistryObject<Block> QUARTZ_CRYSTAL = registerBlock("quartz_crystal",
+            () -> new QuartzCrystalBlock(7, 3, BlockBehaviour.Properties.copy(Blocks.AMETHYST_CLUSTER).noOcclusion().randomTicks().sound(SoundType.AMETHYST_CLUSTER).strength(1.5F).lightLevel( (p_60929_) ->{
+                return 8;
+            } )), CreativeModeTab.TAB_BUILDING_BLOCKS);
+
+    public static final RegistryObject<Block> SMOOTH_ENDSTONE = registerBlock("smooth_endstone",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(0.5f).sound(SoundType.BASALT)), CreativeModeTab.TAB_BUILDING_BLOCKS);
 
@@ -53,16 +64,6 @@ public class GeodeModBlocks {
         return 2;
     })), CreativeModeTab.TAB_BUILDING_BLOCKS);
 
-    public static final RegistryObject<Block> BUDDING_NETHER_QUARTZ = registerBlock("budding_nether_quartz",
-            () -> new BuddingNetherQuartzBlock(BlockBehaviour.Properties.of(Material.AMETHYST).randomTicks().strength(1.5F).sound(SoundType.NETHER_ORE).requiresCorrectToolForDrops()), CreativeModeTab.TAB_BUILDING_BLOCKS);
-
-    public static final RegistryObject<Block> BUDDING_BASALT_QUARTZ = registerBlock("budding_basalt_quartz",
-            () -> new BuddingNetherQuartzBlock(BlockBehaviour.Properties.of(Material.AMETHYST).randomTicks().strength(1.5F).sound(SoundType.BASALT).requiresCorrectToolForDrops()), CreativeModeTab.TAB_BUILDING_BLOCKS);
-
-    public static final RegistryObject<Block> QUARTZ_CRYSTAL = registerBlock("quartz_crystal",
-            () -> new QuartzCrystalBlock(7, 3, BlockBehaviour.Properties.copy(Blocks.AMETHYST_CLUSTER).noOcclusion().randomTicks().sound(SoundType.AMETHYST_CLUSTER).strength(1.5F).lightLevel( (p_60929_) ->{
-                return 8;
-            } )), CreativeModeTab.TAB_BUILDING_BLOCKS);
 
     /**public static final RegistryObject<Block> PRISMARINE_CRYSTAL = registerBlock("prismarine_crystal",
             () -> new PrismarineCrystalBlock(7, 3, BlockBehaviour.Properties.copy(Blocks.AMETHYST_CLUSTER).noOcclusion().randomTicks().sound(SoundType.AMETHYST_CLUSTER).strength(1.5F).lightLevel( (p_60929_) ->{

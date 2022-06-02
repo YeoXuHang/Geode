@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "geode:blocks/smooth_end_stone"
+    "all": "geode:blocks/smooth_endstone"
   }
 }

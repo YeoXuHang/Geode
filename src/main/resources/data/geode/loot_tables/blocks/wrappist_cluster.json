@@ -25,7 +25,7 @@
                   }
                 }
               ],
-              "name": "geode:wrappsit_cluster"
+              "name": "geode:wrappist_cluster"
             },
             {
               "type": "minecraft:alternatives",

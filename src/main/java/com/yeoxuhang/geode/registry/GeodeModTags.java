@@ -2,7 +2,6 @@ package com.yeoxuhang.geode.registry;
 
 import com.yeoxuhang.geode.GeodeMod;
 import net.minecraft.core.Registry;
-import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 
 import net.minecraft.tags.TagKey;
@@ -13,7 +12,7 @@ public class GeodeModTags {
     public static final TagKey<Biome> HAS_QUARTZ_GEODE
             = tag("has_quartz_geode");
 
-    public static final TagKey<Biome> HAS_BASALT_QUARTZ_GEODE
+    public static TagKey<Biome> HAS_BASALT_QUARTZ_GEODE
             = tag("has_basalt_quartz_geode");
 
     public static final TagKey<Biome> HAS_WRAPPIST_GEODE

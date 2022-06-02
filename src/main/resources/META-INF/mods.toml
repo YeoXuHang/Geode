@@ -4,11 +4,11 @@ loaderVersion="[40,)"
 license="All rights reserved"
 [[mods]]
 modId="geode"
-version="1.0.0"
+version="1.0.2"
 displayName="Geode+"
 displayURL="https://www.curseforge.com/minecraft/mc-mods/geode-forge"
 logoFile="logo.png"
-authors="YeoXuHang"
+authors="Owner: YeoXuHang, Artist: Heizer"
 description='''
 a mod that add geodes to Minecraft Overworld, Nether and even The End!
 '''

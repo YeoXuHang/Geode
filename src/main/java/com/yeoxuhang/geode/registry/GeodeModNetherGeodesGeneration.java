@@ -38,9 +38,12 @@ public class GeodeModNetherGeodesGeneration {
         if (doesBiomeMatch(event.getName(), Biomes.SOUL_SAND_VALLEY)){
             base.add(GeodeModPlacedFeatures.QUARTZ_GEODE_PLACED);
         }
-
     }
-    public static boolean doesBiomeMatch(ResourceLocation biomeNameIn, ResourceKey<Biome> biomeIn){
+    public static boolean doesBiomeMatch(ResourceLocation location, ResourceKey<Biome> key){
+        return location.getPath().matches(key.location().getPath());
+    }
+
+    public static boolean doesBiomeTagMatch(ResourceLocation biomeNameIn, TagKey<Biome> biomeIn){
         return biomeNameIn.getPath().matches(biomeIn.location().getPath());
     }
 }

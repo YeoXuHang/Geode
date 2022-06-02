@@ -28,7 +28,7 @@ public class BuddingWrappistBlock extends AmethystBlock {
     }
 
     public void randomTick(BlockState blockState, ServerLevel serverLevel, BlockPos blockPos, Random random) {
-        if (random.nextInt(3) == 0) {
+        if (random.nextInt(10) == 0) {
             Direction direction = DIRECTIONS[random.nextInt(DIRECTIONS.length)];
             BlockPos blockpos = blockPos.relative(direction);
             BlockState blockstate = serverLevel.getBlockState(blockpos);

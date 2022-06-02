@@ -23,7 +23,7 @@ public class GeodeModConfiguredFeatures {
                                       BlockStateProvider.simple(GeodeModBlocks.WRAPPIST_BLOCK.get()),
                                       BlockStateProvider.simple(GeodeModBlocks.BUDDING_WRAPPIST.get()),
                                       BlockStateProvider.simple(GeodeModBlocks.GALCITE.get()),
-                                      BlockStateProvider.simple(GeodeModBlocks.SMOOTH_END_STONE.get()),
+                                      BlockStateProvider.simple(GeodeModBlocks.SMOOTH_ENDSTONE.get()),
                                       List.of(GeodeModBlocks.SMALL_WRAPPIST_BUD.get().defaultBlockState(),
                                               GeodeModBlocks.MEDIUM_WRAPPIST_BUD.get().defaultBlockState(),
                                               GeodeModBlocks.LARGE_WRAPPIST_BUD.get().defaultBlockState(),
