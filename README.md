@@ -17,8 +17,7 @@ https://www.curseforge.com/minecraft/mc-mods/geode-forge
 
 ## Source access
 
-If you are a reputable modder, or me know you well, please reach out to me on Discord if you require source access.
-Discord link https://discord.gg/Ephgb4cGsN
+If you are a reputable modder, or me know you well, please reach out to me on [Discord](https://discord.gg/Ephgb4cGsN) if you require source access.
 -----------------
 
 © 2022 YeoXuHang. All rights reserved.
