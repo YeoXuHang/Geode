@@ -4,7 +4,7 @@ loaderVersion="[40,)"
 license="All rights reserved"
 [[mods]]
 modId="geode"
-version="1.0.2"
+version="1.0.6"
 displayName="Geode+"
 displayURL="https://www.curseforge.com/minecraft/mc-mods/geode-forge"
 logoFile="logo.png"

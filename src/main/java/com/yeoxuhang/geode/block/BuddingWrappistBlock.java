@@ -5,7 +5,6 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.level.block.AmethystBlock;
-import net.minecraft.world.level.block.AmethystClusterBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -35,16 +34,16 @@ public class BuddingWrappistBlock extends AmethystBlock {
             Block block = null;
             if (canClusterGrowAtState(blockstate)) {
                 block = GeodeModBlocks.SMALL_WRAPPIST_BUD.get();
-            } else if (blockstate.is(GeodeModBlocks.SMALL_WRAPPIST_BUD.get()) && blockstate.getValue(AmethystClusterBlock.FACING) == direction) {
+            } else if (blockstate.is(GeodeModBlocks.SMALL_WRAPPIST_BUD.get()) && blockstate.getValue(WrappistClusterBlock.FACING) == direction) {
                 block = GeodeModBlocks.MEDIUM_WRAPPIST_BUD.get();
-            } else if (blockstate.is(GeodeModBlocks.MEDIUM_WRAPPIST_BUD.get()) && blockstate.getValue(AmethystClusterBlock.FACING) == direction) {
+            } else if (blockstate.is(GeodeModBlocks.MEDIUM_WRAPPIST_BUD.get()) && blockstate.getValue(WrappistClusterBlock.FACING) == direction) {
                 block = GeodeModBlocks.LARGE_WRAPPIST_BUD.get();
-            } else if (blockstate.is(GeodeModBlocks.LARGE_WRAPPIST_BUD.get()) && blockstate.getValue(AmethystClusterBlock.FACING) == direction) {
+            } else if (blockstate.is(GeodeModBlocks.LARGE_WRAPPIST_BUD.get()) && blockstate.getValue(WrappistClusterBlock.FACING) == direction) {
                 block = GeodeModBlocks.WRAPPIST_BLOCK.get();
             }
 
             if (block != null) {
-                BlockState blockstate1 = block.defaultBlockState().setValue(AmethystClusterBlock.FACING, direction).setValue(AmethystClusterBlock.WATERLOGGED, Boolean.valueOf(blockstate.getFluidState().getType() == Fluids.WATER));
+                BlockState blockstate1 = block.defaultBlockState().setValue(WrappistClusterBlock.FACING, direction).setValue(WrappistClusterBlock.WATERLOGGED, Boolean.valueOf(blockstate.getFluidState().getType() == Fluids.WATER));
                 serverLevel.setBlockAndUpdate(blockpos, blockstate1);
             }
 

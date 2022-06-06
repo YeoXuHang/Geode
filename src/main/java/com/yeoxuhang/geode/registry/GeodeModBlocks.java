@@ -5,10 +5,7 @@ import com.yeoxuhang.geode.block.*;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.AmethystClusterBlock;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -28,6 +25,9 @@ public class GeodeModBlocks {
     public static final RegistryObject<Block> BUDDING_BASALT_QUARTZ = registerBlock("budding_basalt_quartz",
             () -> new BuddingNetherQuartzBlock(BlockBehaviour.Properties.of(Material.AMETHYST).randomTicks().strength(1.5F).sound(SoundType.BASALT).requiresCorrectToolForDrops()), CreativeModeTab.TAB_BUILDING_BLOCKS);
 
+    public static final RegistryObject<Block> BUDDING_BLACKSTONE_QUARTZ = registerBlock("budding_blackstone_quartz",
+            () -> new BuddingNetherQuartzBlock(BlockBehaviour.Properties.of(Material.AMETHYST).randomTicks().strength(1.5F).sound(SoundType.NETHER_ORE).requiresCorrectToolForDrops()), CreativeModeTab.TAB_BUILDING_BLOCKS);
+
     public static final RegistryObject<Block> QUARTZ_CRYSTAL = registerBlock("quartz_crystal",
             () -> new QuartzCrystalBlock(7, 3, BlockBehaviour.Properties.copy(Blocks.AMETHYST_CLUSTER).noOcclusion().randomTicks().sound(SoundType.AMETHYST_CLUSTER).strength(1.5F).lightLevel( (p_60929_) ->{
                 return 8;
@@ -36,6 +36,10 @@ public class GeodeModBlocks {
     public static final RegistryObject<Block> SMOOTH_ENDSTONE = registerBlock("smooth_endstone",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(0.5f).sound(SoundType.BASALT)), CreativeModeTab.TAB_BUILDING_BLOCKS);
+
+    /*public static final RegistryObject<Block> TABLE = registerBlock("table",
+            () -> new FletchingTableBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(0.5f).sound(SoundType.BASALT)), CreativeModeTab.TAB_DECORATIONS);*/
 
     public static final RegistryObject<Block> GALCITE = registerBlock("galcite",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
@@ -47,20 +51,20 @@ public class GeodeModBlocks {
     public static final RegistryObject<Block> BUDDING_WRAPPIST = registerBlock("budding_wrappist",
             () -> new BuddingWrappistBlock(BlockBehaviour.Properties.of(Material.AMETHYST).randomTicks().strength(1.5F).sound(SoundType.AMETHYST).requiresCorrectToolForDrops()), CreativeModeTab.TAB_BUILDING_BLOCKS);
     public static final RegistryObject<Block> WRAPPIST_CLUSTER = registerBlock("wrappist_cluster",
-            () -> new AmethystClusterBlock(7, 3, BlockBehaviour.Properties.copy(Blocks.AMETHYST_CLUSTER).noOcclusion().randomTicks().sound(SoundType.AMETHYST_CLUSTER).strength(1.5F).lightLevel( (p_60929_) ->{
+            () -> new WrappistClusterBlock(7, 3, BlockBehaviour.Properties.copy(Blocks.AMETHYST_CLUSTER).noOcclusion().randomTicks().sound(SoundType.AMETHYST_CLUSTER).strength(1.5F).lightLevel( (p_60929_) ->{
                 return 8;
             } )), CreativeModeTab.TAB_BUILDING_BLOCKS);
 
     public static final RegistryObject<Block> LARGE_WRAPPIST_BUD = registerBlock("large_wrappist_bud",
-            () -> new AmethystClusterBlock(5, 3, BlockBehaviour.Properties.copy(Blocks.LARGE_AMETHYST_BUD).sound(SoundType.MEDIUM_AMETHYST_BUD).lightLevel((p_60929_) -> {
+            () -> new WrappistClusterBlock(5, 3, BlockBehaviour.Properties.copy(Blocks.LARGE_AMETHYST_BUD).sound(SoundType.MEDIUM_AMETHYST_BUD).lightLevel((p_60929_) -> {
         return 6;
     })), CreativeModeTab.TAB_BUILDING_BLOCKS);
     public static final RegistryObject<Block> MEDIUM_WRAPPIST_BUD = registerBlock("medium_wrappist_bud",
-            () -> new AmethystClusterBlock(4, 3, BlockBehaviour.Properties.copy(Blocks.MEDIUM_AMETHYST_BUD).sound(SoundType.LARGE_AMETHYST_BUD).lightLevel((p_60929_) -> {
+            () -> new WrappistClusterBlock(4, 3, BlockBehaviour.Properties.copy(Blocks.MEDIUM_AMETHYST_BUD).sound(SoundType.LARGE_AMETHYST_BUD).lightLevel((p_60929_) -> {
         return 3;
     })), CreativeModeTab.TAB_BUILDING_BLOCKS);
     public static final RegistryObject<Block> SMALL_WRAPPIST_BUD = registerBlock("small_wrappist_bud",
-            () -> new AmethystClusterBlock(3, 4, BlockBehaviour.Properties.copy(Blocks.SMALL_AMETHYST_BUD).sound(SoundType.SMALL_AMETHYST_BUD).lightLevel((p_60929_) -> {
+            () -> new WrappistClusterBlock(3, 4, BlockBehaviour.Properties.copy(Blocks.SMALL_AMETHYST_BUD).sound(SoundType.SMALL_AMETHYST_BUD).lightLevel((p_60929_) -> {
         return 2;
     })), CreativeModeTab.TAB_BUILDING_BLOCKS);
 

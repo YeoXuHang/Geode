@@ -22,6 +22,7 @@ public class GeodeMod {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
         GeodeModItems.register(eventBus);
         GeodeModBlocks.register(eventBus);
+        /*GeodeModVillagers.register(eventBus);*/
         //Client setup
         eventBus.addListener(this::clientSetup);
         MinecraftForge.EVENT_BUS.register(this);

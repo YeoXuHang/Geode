@@ -66,6 +66,24 @@ public class GeodeModConfiguredFeatures {
                               new GeodeLayerSettings(1.7D, 2.2D, 3.2D, 4.2D),
                               new GeodeCrackSettings(0.95D, 2.0D, 2), 0.35D, 0.083D, true, UniformInt.of(4, 6), UniformInt.of(3, 4), UniformInt.of(1, 2), -16, 16, 0.05D, 1));
 
+      public static final Holder<ConfiguredFeature<GeodeConfiguration, ?>> BLACKSTONE_QUARTZ_GEODE =
+              FeatureUtils.register("blackstone_quartz_geode",
+                      Feature.GEODE , new GeodeConfiguration(
+                              new GeodeBlockSettings(BlockStateProvider.simple(Blocks.AIR),
+                                      BlockStateProvider.simple(Blocks.BLACKSTONE),
+                                      BlockStateProvider.simple(GeodeModBlocks.BUDDING_BLACKSTONE_QUARTZ.get()),
+                                      BlockStateProvider.simple(Blocks.BLACKSTONE),
+                                      BlockStateProvider.simple(Blocks.BLACKSTONE),
+                                      List.of(GeodeModBlocks.QUARTZ_CRYSTAL.get().defaultBlockState(),
+                                              GeodeModBlocks.QUARTZ_CRYSTAL.get().defaultBlockState(),
+                                              GeodeModBlocks.QUARTZ_CRYSTAL.get().defaultBlockState(),
+                                              GeodeModBlocks.QUARTZ_CRYSTAL.get().defaultBlockState()),
+                                      BlockTags.FEATURES_CANNOT_REPLACE ,
+                                      BlockTags.GEODE_INVALID_BLOCKS) ,
+                              new GeodeLayerSettings(1.7D, 2.2D, 3.2D, 4.2D),
+                              new GeodeCrackSettings(0.95D, 2.0D, 2), 0.35D, 0.083D, true, UniformInt.of(4, 6), UniformInt.of(3, 4), UniformInt.of(1, 2), -16, 16, 0.05D, 1));
+
+
       /**public static final Holder<ConfiguredFeature<GeodeConfiguration, ?>> PRISMARINE_GEODE =
               FeatureUtils.register("prismarine_geode",
                       Feature.GEODE , new GeodeConfiguration(
