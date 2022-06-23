@@ -9,7 +9,8 @@ import net.minecraftforge.fml.common.Mod;
 public class GeodeModWorldEvents {
     @SubscribeEvent
     public static void biomeLoadingEvent(final BiomeLoadingEvent event) {
-        /**GeodeModEndGeodesGeneration.generateEndGeodeFeatures(event);**/
+        GeodeModEndGeodesGeneration.generateEndGeodeFeatures(event);
         GeodeModNetherGeodesGeneration.generateNetherGeodeFeatures(event);
+        /*GeodeModOceanGeodesGeneration.generateOceanGeodeFeatures(event);*/
     }
 }

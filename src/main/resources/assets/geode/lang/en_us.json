@@ -1,5 +1,16 @@
 {
-  "block.geode.smooth_end_stone": "Smooth End Stone",
+  "block.geode.smooth_endstone": "Smooth End Stone",
   "block.geode.budding_nether_quartz": "Budding Nether Quartz",
-  "block.geode.quartz_crystal": "Nether Quartz Crystal"
+  "block.geode.budding_blackstone_quartz": "Budding Blackstone Quartz",
+  "block.geode.budding_basalt_quartz": "Budding Basalt Quartz",
+  "block.geode.quartz_crystal": "Nether Quartz Crystal",
+  "block.geode.galcite": "Galcite",
+  "block.geode.budding_wrappist": "Budding Wrappist",
+  "block.geode.wrappist_block": "Wrappist Block",
+  "block.geode.wrappist_cluster": "Wrappist Cluster",
+  "block.geode.large_wrappist_bud": "Large Wrappist Bud",
+  "block.geode.medium_wrappist_bud": "Medium Wrappist Bud",
+  "block.geode.small_wrappist_bud": "Small Wrappist Bud",
+  "item.geode.wrappist_shard": "Wrappist Shard",
+  "entity.minecraft.villager.geode.geologist": "Geologist"
 }

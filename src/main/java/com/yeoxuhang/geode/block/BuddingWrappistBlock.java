@@ -4,17 +4,21 @@ import com.yeoxuhang.geode.registry.GeodeModBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.AmethystBlock;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.level.material.PushReaction;
 
 import java.util.Random;
 
-public class BuddingNetherQuartzBlock extends AmethystBlock {
+public class BuddingWrappistBlock extends AmethystBlock {
+    public static final int GROWTH_CHANCE = 10;
     private static final Direction[] DIRECTIONS = Direction.values();
 
-    public BuddingNetherQuartzBlock(Properties properties) {
+    public BuddingWrappistBlock(BlockBehaviour.Properties properties) {
         super(properties);
     }
 
@@ -23,17 +27,23 @@ public class BuddingNetherQuartzBlock extends AmethystBlock {
     }
 
     public void randomTick(BlockState blockState, ServerLevel serverLevel, BlockPos blockPos, Random random) {
-        if (random.nextInt(3) == 0) {
+        if (random.nextInt(10) == 0) {
             Direction direction = DIRECTIONS[random.nextInt(DIRECTIONS.length)];
             BlockPos blockpos = blockPos.relative(direction);
             BlockState blockstate = serverLevel.getBlockState(blockpos);
             Block block = null;
             if (canClusterGrowAtState(blockstate)) {
-                block = GeodeModBlocks.QUARTZ_CRYSTAL.get();
+                block = GeodeModBlocks.SMALL_WRAPPIST_BUD.get();
+            } else if (blockstate.is(GeodeModBlocks.SMALL_WRAPPIST_BUD.get()) && blockstate.getValue(WrappistClusterBlock.FACING) == direction) {
+                block = GeodeModBlocks.MEDIUM_WRAPPIST_BUD.get();
+            } else if (blockstate.is(GeodeModBlocks.MEDIUM_WRAPPIST_BUD.get()) && blockstate.getValue(WrappistClusterBlock.FACING) == direction) {
+                block = GeodeModBlocks.LARGE_WRAPPIST_BUD.get();
+            } else if (blockstate.is(GeodeModBlocks.LARGE_WRAPPIST_BUD.get()) && blockstate.getValue(WrappistClusterBlock.FACING) == direction) {
+                block = GeodeModBlocks.WRAPPIST_BLOCK.get();
             }
 
             if (block != null) {
-                BlockState blockstate1 = block.defaultBlockState().setValue(QuartzCrystalBlock.FACING, direction).setValue(QuartzCrystalBlock.WATERLOGGED, Boolean.valueOf(blockstate.getFluidState().getType() == Fluids.WATER));
+                BlockState blockstate1 = block.defaultBlockState().setValue(WrappistClusterBlock.FACING, direction).setValue(WrappistClusterBlock.WATERLOGGED, Boolean.valueOf(blockstate.getFluidState().getType() == Fluids.WATER));
                 serverLevel.setBlockAndUpdate(blockpos, blockstate1);
             }
 

@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01",
+    "23"
+  ],
+  "key": {
+    "0": {
+      "item": "geode:wrappist_shard"
+    },
+    "1": {
+      "item": "geode:wrappist_shard"
+    },
+    "2": {
+      "item": "geode:wrappist_shard"
+    },
+    "3": {
+      "item": "geode:wrappist_shard"
+    }
+  },
+  "result": {
+    "item": "geode:wrappist_block",
+    "count": 1
+  }
+}

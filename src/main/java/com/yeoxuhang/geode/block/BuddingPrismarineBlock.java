@@ -4,17 +4,20 @@ import com.yeoxuhang.geode.registry.GeodeModBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.AmethystBlock;
+import net.minecraft.world.level.block.AmethystClusterBlock;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.level.material.PushReaction;
 
 import java.util.Random;
 
-public class BuddingNetherQuartzBlock extends AmethystBlock {
+public class BuddingPrismarineBlock extends AmethystBlock {
     private static final Direction[] DIRECTIONS = Direction.values();
 
-    public BuddingNetherQuartzBlock(Properties properties) {
+    public BuddingPrismarineBlock(Properties properties) {
         super(properties);
     }
 
@@ -29,11 +32,11 @@ public class BuddingNetherQuartzBlock extends AmethystBlock {
             BlockState blockstate = serverLevel.getBlockState(blockpos);
             Block block = null;
             if (canClusterGrowAtState(blockstate)) {
-                block = GeodeModBlocks.QUARTZ_CRYSTAL.get();
+                /**block = GeodeModBlocks.PRISMARINE_CRYSTAL.get();**/
             }
 
             if (block != null) {
-                BlockState blockstate1 = block.defaultBlockState().setValue(QuartzCrystalBlock.FACING, direction).setValue(QuartzCrystalBlock.WATERLOGGED, Boolean.valueOf(blockstate.getFluidState().getType() == Fluids.WATER));
+                BlockState blockstate1 = block.defaultBlockState().setValue(AmethystClusterBlock.FACING, direction).setValue(AmethystClusterBlock.WATERLOGGED, Boolean.valueOf(blockstate.getFluidState().getType() == Fluids.WATER));
                 serverLevel.setBlockAndUpdate(blockpos, blockstate1);
             }
 

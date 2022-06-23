@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "geode:blocks/budding_basalt_quartz_top",
+    "side": "geode:blocks/budding_basalt_quartz_side"
+  }
+}

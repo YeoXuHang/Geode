@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "geode:quartz_crystal",
+    "geode:budding_nether_quartz",
+    "geode:wrappist_cluster",
+    "geode:budding_wrappist",
+    "geode:wrappist_block",
+    "geode:large_wrappist_bud",
+    "geode:medium_wrappist_bud",
+    "geode:small_wrappist_bud"
+  ]
+}

@@ -12,8 +12,8 @@ public class GeodeModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, GeodeMod.MOD_ID);
 
-    /**public static final RegistryObject<Item> ENDERETHYST_SHARD = ITEMS.register("enderethyst_shard",
-            () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));**/
+    public static final RegistryObject<Item> WRAPPIST_SHARD = ITEMS.register("wrappist_shard",
+            () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
